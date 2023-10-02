@@ -7,10 +7,10 @@ remote_theme: sighingnow/jekyll-gitbook
 # markdown: GFM
 syntax_highlighter_style: colorful
 
-#toc:
-#    enabled: true
-#    h_min: 1
-#    h_max: 3
+toc:
+    enabled: true
+    h_min: 1
+    h_max: 3
 
 relative_links:
         enabled: true
