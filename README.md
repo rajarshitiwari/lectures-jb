@@ -16,23 +16,14 @@ print(np.pi)
 
 ### [Learning outcomes](#learning-outcome)
 
-<table style="width:100%">
-<tr>
-<td width="60%">
 In this module we revise the good old and simpler concepts of bits and their manipulations to set the stage for the fundamental blocks of quantum computing, i.e., qubits and their manipulation. As we go through the sections below, we will -
 
-<br></br>
 
-<ul>
-  <li> Learn the features of bits and qubits from phenomenological perspective, and through comparison of their similarities and differences. </li>
-  <li> We will also learn how manipulating bits and a qubits forms a building block for basic computations. </li>
-</ul>
-</td>
-<td width="40%"> <img width="900" src="./images/quant.png"> </td>
-</tr>
-</table>
+- Learn the features of bits and qubits from phenomenological perspective, and through comparison of their similarities and differences.
+- We will also learn how manipulating bits and a qubits forms a building block for basic computations.
 
-[TOC]
+[Image](./images/quant.png)
+
 
 ### Table of Contents
 - [Lecture 3.1.1](#lecture-311)
