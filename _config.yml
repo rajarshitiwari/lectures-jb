@@ -1,13 +1,16 @@
-plugins:
-        - jekyll-relative-links
-markdown: GFM
+title: ICHEC Lecture Notes
+longtitle: Lecture Notes on various topics from ICHEC team
 remote_theme: sighingnow/jekyll-gitbook
+
+#plugins:
+#        - jekyll-relative-links
+# markdown: GFM
 syntax_highlighter_style: colorful
 
-toc:
-    enabled: true
-    h_min: 1
-    h_max: 3
+#toc:
+#    enabled: true
+#    h_min: 1
+#    h_max: 3
 
 relative_links:
         enabled: true
@@ -16,10 +19,10 @@ include:
         - README.md
         - about.md
         - random.md
-github:
-  is_project_page: false
+#github:
+#  is_project_page: false
 
-ignore_theme_config: true
+#ignore_theme_config: true
 # gems: [jekyll-mermaid]
 
 ## => Markdown Enhancements
@@ -32,4 +35,4 @@ mathjax_autoNumber: true # (default false)
 mermaid: true # (default false)
 
 ## Chart
-chart: false # (default false)
+chart: true # (default false)
