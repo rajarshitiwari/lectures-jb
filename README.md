@@ -2,7 +2,6 @@
 
 Landing pages for a lecture notes by ichec
 
-<link rel="stylesheet" type="text/css" href="../style.css">
 <div style="text-align: justify">
 
 
