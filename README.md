@@ -1,4 +1,10 @@
-# Lectures
+---
+layout: home
+title: ICHEC Lectures
+mermaid: true
+---
+
+## Lectures
 
 Landing pages for a lecture notes by ichec
 
