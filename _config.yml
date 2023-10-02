@@ -1,5 +1,6 @@
 plugins:
         - jekyll-relative-links
+markdown: GFM
 theme: jekyll-theme-hacker
 
 relative_links:
