@@ -14,3 +14,4 @@ github:
   is_project_page: false
 
 ignore_theme_config: true
+gems: [jekyll-mermaid]
