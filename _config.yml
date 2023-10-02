@@ -7,6 +7,18 @@ remote_theme: sighingnow/jekyll-gitbook
 # markdown: GFM
 syntax_highlighter_style: colorful
 
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: true # (default false)
+mathjax_autoNumber: true # (default false)
+
+## Mermaid
+mermaid: true # (default false)
+
+## Chart
+chart: true # (default false)
+
 toc:
     enabled: true
 
@@ -23,14 +35,3 @@ include:
 #ignore_theme_config: true
 # gems: [jekyll-mermaid]
 
-## => Markdown Enhancements
-##############################
-## Mathjax
-mathjax: # true # (default false)
-mathjax_autoNumber: true # (default false)
-
-## Mermaid
-mermaid: true # (default false)
-
-## Chart
-chart: true # (default false)
