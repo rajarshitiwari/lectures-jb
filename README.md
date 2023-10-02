@@ -1,9 +1,3 @@
----
-title: Lectures
-mathjax: true
-mermaid: true
----
-
 # Lectures
 
 Landing pages for a lecture notes by ichec
