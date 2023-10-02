@@ -48,4 +48,4 @@ exclude:
 plugins:
     - jekyll-feed
     - jekyll-relative-links
-    -jemoji
+    - jemoji
