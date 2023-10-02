@@ -25,11 +25,11 @@ ignore_theme_config: true
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+mathjax: # true # (default false)
+mathjax_autoNumber: true # (default false)
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true # (default false)
 
 ## Chart
-chart: # false (default), true
+chart: false # (default false)
