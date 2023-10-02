@@ -20,4 +20,16 @@ github:
   is_project_page: false
 
 ignore_theme_config: true
-gems: [jekyll-mermaid]
+# gems: [jekyll-mermaid]
+
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: # false (default), true
+mathjax_autoNumber: # false (default), true
+
+## Mermaid
+mermaid: # false (default), true
+
+## Chart
+chart: # false (default), true
