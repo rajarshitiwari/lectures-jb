@@ -79,14 +79,6 @@ A(Input) --> |Feed into| B{Algorithm} --> |Computation finished| C(Result)
 a(12) & b(15) --> add{Addition} --> sum(27)
 ```
 
-{% mermaid %}
-graph LR;
-A(Input) --> |Feed into| B{Algorithm} --> |Computation finished| C(Result)
-
-a(12) & b(15) --> add{Addition} --> sum(27)
-{% endmermaid %}
-
-
 
 The input information, can in principle be anything, however over the decades we have learn to represent it in some standardised format which is easily understood by computers. For most applications, the input can be broken down to a list or collection of simpler object, and the simpler object are either a number, or a text. The numbers themselves can be integers, or real numbers.
 The text can be english, or any other language, and within each language, a text is an ordered sequence of characters of alphabets and symbols.
