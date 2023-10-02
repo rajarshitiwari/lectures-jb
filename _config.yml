@@ -2,13 +2,23 @@ title: ICHEC Lecture Notes
 longtitle: Lecture Notes on various topics from ICHEC team
 remote_theme: sighingnow/jekyll-gitbook
 
-#plugins:
-#        - jekyll-relative-links
-# markdown: GFM
-syntax_highlighter_style: colorful
 
 ## => Markdown Enhancements
 ##############################
+markdown: kramdown
+kramdown:
+    auto_ids:                 true
+    input:                    GFM
+    math_engine:              mathjax
+    smart_quotes:             lsquo,rsquo,ldquo,rdquo
+    toc_levels:               1..6
+    syntax_highlighter:       rouge
+    syntax_highlighter_opts:
+        guess_lang:           true
+
+syntax_highlighter_style: colorful
+
+markdown_ext:                 markdown,mkdown,mkdn,mkd,md
 ## Mathjax
 mathjax: true # (default false)
 mathjax_autoNumber: true # (default false)
@@ -23,15 +33,19 @@ toc:
     enabled: true
 
 relative_links:
-        enabled: true
-        collections: true
-include:
-        - README.md
-        - about.md
-        - random.md
+    enabled: true
+    collections: true
+
+exclude:
+    _drafts
+
 #github:
 #  is_project_page: false
 
 #ignore_theme_config: true
 # gems: [jekyll-mermaid]
 
+plugins:
+    - jekyll-feed
+    - jekyll-relative-links
+    -jemoji
