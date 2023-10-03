@@ -2,9 +2,6 @@
 
 Landing pages for a lecture notes by ichec
 
-<div style="text-align: justify">
-
-
 
 ## Module 3.1 - From Bits to Qubits
 
