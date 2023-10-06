@@ -582,7 +582,7 @@ remote_theme:     sighingnow/jekyll-gitbook
 {: .block-tip }
 
 
-{% include "https://youtu.be/fNk_zzaMoSs?si=9RJrAKFlwvlN4eBv" %}
+{% include youtube.html id="9RJrAKFlwvlN4eBv" %}
 
 
 This
