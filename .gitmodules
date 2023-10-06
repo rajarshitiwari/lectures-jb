@@ -1,3 +1,0 @@
-[submodule "qpcc"]
-	path = qpcc
-	url = git@git.ichec.ie:quantumcomputing/qpcc.git
