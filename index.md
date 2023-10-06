@@ -1,17 +1,22 @@
-## Lectures
+---
+layout: home
+title: Lecture Notes from ICHEC
+permalink: /
+mermaid: true
+mathjax: true
+---
 
-Landing pages for a lecture notes by ichec
+Landing page for the lecture notes from ICHEC team
 
+- QPCC
+- PyQM
+{:toc}
 
-## Quantum Programming Certification Course (QPCC)
+## QPCC
+Quantum Programming and Certification Course (QOCC) is being developed and offer by ICHEC, targetting a rather wide audiances. It is geared towards exploring the Quantum Science with minimal technicality.
+{: .text-justify}
+[QPCC lecture page](qpcc/README.md)
 
-[QPCC module 3.1](./module-3.1.md)
-
-
-## Module 3.1 - From Bits to Qubits
-
-
-```python {cmd=true}
-import numpy as np
-print(np.pi)
-```
+## PyQM
+Python for Quantum Mechanics (PyQM) is a seven week course offered to students in Trinity Masters in Quantum Science programm. It aims to provide exposure to computation through python.
+{: .text-justify}
