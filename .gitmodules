@@ -1,0 +1,3 @@
+[submodule "pyqm"]
+	path = pyqm
+	url = git@github.com:ICHEC/pyqm.git
