@@ -59,7 +59,8 @@ exclude:
   - qpcc/Recording 
 
 include:
-  - qpcc/*
+  - qpcc
+  - pyqm
   - gitbook.md
 
 #collections:

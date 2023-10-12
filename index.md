@@ -23,3 +23,4 @@ Python for Quantum Mechanics (PyQM) is a seven week course offered to students i
 
 [PyQM lecture page](pyqm/README.md)
 
+
