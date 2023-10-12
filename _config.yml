@@ -6,7 +6,7 @@ email:            support@ichec.ie
 description: >
   ICHEC lecture notes
 
-version:          1.0
+version:          3.9
 gitbook_version:  3.2.3
 
 relative_url: true
@@ -24,7 +24,7 @@ markdown_ext:             md
 toc:
   enabled: true
   h_min: 1
-  h_max: 3
+  h_max: 4
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
@@ -67,7 +67,7 @@ include:
 #    output: true
 #    permalink: /:collection/:path/
 
-page_width: 800px
+page_width: 1200px
 
 destination:      ./_site
 #incremental:      false
