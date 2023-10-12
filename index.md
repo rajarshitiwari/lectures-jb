@@ -20,3 +20,6 @@ Quantum Programming and Certification Course (QOCC) is being developed and offer
 ## PyQM
 Python for Quantum Mechanics (PyQM) is a seven week course offered to students in Trinity Masters in Quantum Science programm. It aims to provide exposure to computation through python.
 {: .text-justify}
+
+[PyQM lecture page](pyqm/README.md)
+
