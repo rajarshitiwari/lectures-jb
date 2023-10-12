@@ -1,0 +1,13 @@
+[
+    {
+        "front": "One byte contains 8 bits, how many states can this be in?",
+        "back": "Correct. $2^8=256$ and in general $2^n$ for $n$ bits. It is clear that this is more than enough bits to encode every letter and symbol one might want. The 8th bit is often used as a Parity Bit that checks if the number of 1s in the bit is either even or odd. This means that if there is an error in copying this letter we can always check the parity bit to see if one of the bits has flipped from 1 to 0. This concept of adding extra bits to ensure error resilience is an important one when it comes to quantum computing."
+        
+    },
+    
+    {
+        "front": "How much wood could a woodchuck chuck if a woodchuck could chuck wood?",
+        "back": "As much wood as a woodchuck could chuck, If a woodchuck could chuck wood."
+        
+    }
+]
