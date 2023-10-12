@@ -7,12 +7,8 @@ gem "jekyll"
 gem 'jekyll-feed'
 gem 'jekyll-readme-index'
 gem 'jekyll-relative-links'
+gem 'jekyll-toc'
 gem 'jekyll-youtube'
 gem 'jemoji'
 gem 'webrick'
-
-# gem "rails"
-
-gem "kramdown-syntax-coderay", "~> 1.0"
-
-gem "jekyll-toc", "~> 0.18.0"
+gem "kramdown-syntax-coderay"
