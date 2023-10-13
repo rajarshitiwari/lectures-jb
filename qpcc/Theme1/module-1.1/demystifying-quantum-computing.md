@@ -32,6 +32,7 @@ This is an introductory module, which sets the stage for the remaining course by
 - References
 {:toc}
 
+### Learning outcomes
 
 
 ### The Era of High-Performance Computing
