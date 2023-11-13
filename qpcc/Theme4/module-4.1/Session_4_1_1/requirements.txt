@@ -1,3 +1,0 @@
-jupyterquiz==1.8
-jupytercards==1.9.0
-IPython==8.0.1
