@@ -1,3 +1,6 @@
 [submodule "pyqm"]
 	path = pyqm
 	url = git@github.com:ICHEC/pyqm.git
+[submodule "qpcc"]
+	path = qpcc
+	url = git@github.com:ICHEC/qpcc.git
