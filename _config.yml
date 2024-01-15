@@ -1,87 +1,42 @@
-# Configurations
-title:            ICHEC
-longtitle:        ICHEC lecture notes
-author:           ICHEC Team
-email:            support@ichec.ie
-description: >
-  ICHEC lecture notes
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
 
-version:          3.9
-gitbook_version:  3.2.3
+title: Lecture Notes from ICHEC
+author: ICHEC Team
+logo: logo.png
 
-relative_url: true
-#url:              'https://sighingnow.github.io'
-#baseurl:          '/jekyll-gitbook'
-baseurl:          '/lectures'
-rss:              RSS
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
 
-# bootstrap: use the remote theme for the site itself
-#remote_theme: sighingnow/jekyll-gitbook
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
 
-markdown_ext:             md
-#, markdown,mkdown,mkdn,mkd,
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
 
-toc:
-  enabled: true
-  h_min: 1
-  h_max: 4
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: ./ # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
 
-# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     /assets/gitbook/images/favicon.ico
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
 
-# markdown render engine.
-markdown:         kramdown
-kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
-  syntax_highlighter_opts:
-    guess_lang:           true
+html:
+  extra_footer: "Copyright@2022"
 
-syntax_highlighter_style: colorful
-
-toc:
-  enabled: true
-
-# Permalinks
-# permalink:                /:categories/:year-:month-:day-:title:output_ext
-permalink:                /:slugified_categories/:year-:month-:day-:title:output_ext
-
-# Disqus comments
-# disqushandler:            sighingnow
-
-exclude:
-  - _drafts
-  - qpcc/Formatting
-  - qpcc/Recording 
-
-include:
-  - qpcc
-  - pyqm
-  - gitbook.md
-
-#collections:
-#  pages:
-#    output: true
-#    permalink: /:collection/:path/
-
-page_width: 1200px
-
-destination:      ./_site
-#incremental:      false
-regenerate:       true
-
-plugins:
-  - jekyll-feed
-  - jekyll-readme-index
-  - jekyll-relative-links
-  - jemoji
-  - jekyll-toc
-  - jekyll-youtube
-
-
-syntax_highlighter_style: colorful
-highlighter: coderay
+# remove jupyterbooks copyright info
+sphinx:
+  extra_extensions:
+  - sphinxcontrib.mermaid
+  config:
+    html_show_copyright: false
