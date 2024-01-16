@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -164,43 +165,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../index.html">
-                    QPCC
+                    ICHEC lectures
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QPCC course</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">Lectures</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Learning outcomes</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">QPCC Lectures Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Lacture 1: Demystifying Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Lecture 2: Integrating Classical and Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Lecture 3: From Bits to Qubits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-4/realizing-quantum-computing-systems.html">Learning Outcomes</a></li>
 
 
@@ -214,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-5/accessing-quantum-computing-systems.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-6/landscape-of-sdks-tools.html">Learning Outcome</a></li>
+
+
+
+
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-7/landscape-of-quantum-algorithms.html">Landscape of quantum algorithms</a></li>
@@ -503,18 +482,18 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 3.396+0.j     0.   -0.j     0.   -0.j     0.   +0.j     0.   -0.j
-  -0.   +0.j   ]
- [-0.   +0.j     0.619-0.j    -0.   +0.j    -0.   -0.j     0.   +0.j
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 2.621+0.j    -0.   +0.j    -0.   -0.j    -0.   -0.j    -0.   -0.j
   -0.   -0.j   ]
- [-0.   -0.j     0.   -0.j    -0.495+0.404j  0.   +0.j    -0.   -0.j
+ [-0.   +0.j     0.091+0.496j -0.   -0.j    -0.   -0.j    -0.   +0.j
+  -0.   +0.j   ]
+ [-0.   -0.j    -0.   +0.j     0.091-0.496j -0.   +0.j    -0.   -0.j
+  -0.   -0.j   ]
+ [ 0.   +0.j     0.   -0.j     0.   +0.j    -0.562+0.j     0.   -0.j
    0.   +0.j   ]
- [-0.   +0.j     0.   +0.j     0.   -0.j    -0.495-0.404j -0.   +0.j
-   0.   -0.j   ]
- [-0.   +0.j    -0.   +0.j    -0.   -0.j    -0.   +0.j    -0.445-0.j
+ [ 0.   +0.j     0.   -0.j    -0.   +0.j     0.   +0.j    -0.271-0.j
    0.   +0.j   ]
- [-0.   -0.j     0.   -0.j    -0.   -0.j    -0.   +0.j     0.   +0.j
-   0.004-0.j   ]]
+ [ 0.   -0.j    -0.   -0.j    -0.   +0.j    -0.   -0.j    -0.   +0.j
+   0.061-0.j   ]]
 </pre></div>
 </div>
 </div>
@@ -540,11 +519,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[105.24610229 116.71951858  91.04038541 ...  93.78293118  98.19723413
-  71.50750726]
-100.07147535468201
-9.974039719608212
-99.48146832832228
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[102.0318185  102.82491349  93.74903306 ... 102.47096202  98.4846276
+ 100.55406876]
+99.99349227441354
+10.055897867860137
+101.12108192883404
 </pre></div>
 </div>
 </div>
@@ -577,9 +556,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100.50542072675611
-10.123670697845961
-102.48870839842492
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>99.99269881653937
+9.739955724299069
+94.8667375113062
 </pre></div>
 </div>
 </div>
@@ -615,7 +594,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.3 1.4 3.5 3.6 5.2 5.9 6.  6.9 7.8 8.6]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.4 1.  1.5 1.7 2.  2.8 3.  3.9 5.4 5.7]
 </pre></div>
 </div>
 </div>
@@ -655,7 +634,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.00596805 1.9260394 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3.00037877 2.05720709]
 </pre></div>
 </div>
 </div>
@@ -674,7 +653,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.142424
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.137316
 </pre></div>
 </div>
 </div>
@@ -714,7 +693,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/346a78be493c4240daae385a2348bfac39cc937737f6699d32b131626ec7aa34.png" src="../../../_images/346a78be493c4240daae385a2348bfac39cc937737f6699d32b131626ec7aa34.png" />
+<img alt="../../../_images/02d76d4e515f0f3115ca10977b768c5c4ccafef50f4ec2998f914d7d41aa4888.png" src="../../../_images/02d76d4e515f0f3115ca10977b768c5c4ccafef50f4ec2998f914d7d41aa4888.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -733,7 +712,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/fc39269263d121d5c8df8e6b74eeb1adc63a63728e99a3d1ce7e1e76624519ce.png" src="../../../_images/fc39269263d121d5c8df8e6b74eeb1adc63a63728e99a3d1ce7e1e76624519ce.png" />
+<img alt="../../../_images/b628a0a13d676b5bcf14335bd5ff4f6886037a6fb8645227d49a6617e67f3f3e.png" src="../../../_images/b628a0a13d676b5bcf14335bd5ff4f6886037a6fb8645227d49a6617e67f3f3e.png" />
 </div>
 </div>
 <center>

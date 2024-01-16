@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Learning outcomes &#8212; Lecture Notes from ICHEC</title>
+    <title>Lecture 3: From Bits to Qubits &#8212; Lecture Notes from ICHEC</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,11 +65,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'qpcc/lecture-3/from-bits-to-qubits';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Learning Outcomes" href="../lecture-4/realizing-quantum-computing-systems.html" />
-    <link rel="prev" title="Learning outcomes" href="../lecture-2/integrating-classical-and-quantum-computing.html" />
+    <link rel="prev" title="Lecture 2: Integrating Classical and Quantum Computing" href="../lecture-2/integrating-classical-and-quantum-computing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,43 +169,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    QPCC
+                    ICHEC lectures
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QPCC course</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../README.html">Lectures</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../lecture-1/demystifying-quantum-computing.html">Learning outcomes</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../lecture-2/integrating-classical-and-quantum-computing.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../README.html">QPCC Lectures Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture-1/demystifying-quantum-computing.html">Lacture 1: Demystifying Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture-2/integrating-classical-and-quantum-computing.html">Lecture 2: Integrating Classical and Quantum Computing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 3: From Bits to Qubits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture-4/realizing-quantum-computing-systems.html">Learning Outcomes</a></li>
 
 
@@ -216,6 +192,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../lecture-5/accessing-quantum-computing-systems.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture-6/landscape-of-sdks-tools.html">Learning Outcome</a></li>
+
+
+
+
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="../lecture-7/landscape-of-quantum-algorithms.html">Landscape of quantum algorithms</a></li>
@@ -370,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Learning outcomes</h1>
+    <h1>Lecture 3: From Bits to Qubits</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,38 +361,36 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Learning outcomes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-data">Binary Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bit">Bit</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-representation-and-why-quantum">Physical Representation and why Quantum</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-from-decimal-to-binary">Conversion from Decimal to binary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-in-binary">Adding in Binary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-and-operations-in-binary">Gates and Operations in Binary</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-gate">NOT gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xor-gate">XOR gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-half-adder-using-gates">Classical Half-Adder using gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-data">Binary Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bit">Bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-representation-and-why-quantum">Physical Representation and why Quantum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-from-decimal-to-binary">Conversion from Decimal to binary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-in-binary">Adding in Binary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-and-operations-in-binary">Gates and Operations in Binary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-gate">NOT gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xor-gate">XOR gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-half-adder-using-gates">Classical Half-Adder using gates</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-classical-computing">Features of Classical computing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-effects-and-quantum-computing">Quantum effects and Quantum computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-classical-computing">Features of Classical computing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-effects-and-quantum-computing">Quantum effects and Quantum computing</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-qubits">Back to Qubits</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#photons-as-qubits">Photons as qubits</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-superposition">Quantum Superposition</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-measurement">Quantum Measurement</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-gates-and-operations">Quantum Gates and Operations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x-gate">X gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-qubits">Back to Qubits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photons-as-qubits">Photons as qubits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-superposition">Quantum Superposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-measurement">Quantum Measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-gates-and-operations">Quantum Gates and Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-gate">X gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-quantum-computers">Features of Quantum computers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><span class="xref myst">References</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-quantum-computers">Features of Quantum computers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><span class="xref myst">References</span></a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -422,74 +401,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="learning-outcomes">
-<h1>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this heading">#</a></h1>
-<table style="width:100%">
-<tr>
-<td width="60%">
-In this lecture we revise the good old and simpler concepts of bits and their manipulations to set the stage for the fundamental blocks of quantum computing, i.e., qubits and their manipulation. As we go through the sections below, we will -
-<ul>
-  <li> Learn the features of bits and qubits from phenomenological perspective, and through comparison of their similarities and differences. </li>
-  <li> We will also learn how manipulating bits and a qubits forms a building block for basic computations. </li>
-</ul>
-</td>
-<td width="40%"> <img width="900" src="../prep/images/quant.png"> </td>
-</tr>
-</table>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecture-3-from-bits-to-qubits">
+<h1>Lecture 3: From Bits to Qubits<a class="headerlink" href="#lecture-3-from-bits-to-qubits" title="Permalink to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Learning outcomes</p>
+<p>In this lecture we revise the good old and simpler concepts of bits and their manipulations to set the stage for the fundamental blocks of quantum computing, i.e., qubits and their manipulation. As we go through the sections below, we will -</p>
 <ul class="simple">
-<li><p>Introduction</p></li>
-<li><p>Binary Data</p></li>
-<li><p>Physical Representation and why Quantum?</p></li>
-<li><p>Conversion from Decimal to binary</p></li>
-<li><p>Features of Classical comptuing</p></li>
-<li><p>Gates and Operations in Binary</p></li>
-<li><p>Back to Qubits</p></li>
-<li><p>Photons as qubits</p></li>
-<li><p>Quantum Superposition</p></li>
-<li><p>Quantum Measurement</p></li>
-<li><p>Quantum Gates and Operations</p></li>
-<li><p>Features of Quantum computers</p></li>
-<li><p>Appendix</p></li>
-<li><p>Future updates and Scratchpad</p></li>
-<li><p>References
-{:toc}</p></li>
+<li><p>Learn the features of bits and qubits from phenomenological perspective, and through comparison of their similarities and differences. - We will also learn how manipulating bits and a qubits forms a building block for basic computations.</p></li>
 </ul>
-</section>
+</div>
+<img alt="../../_images/quant.png" class="align-center" src="../../_images/quant.png" />
 <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
-<p>In classical computing, which we usually call just computing, we transform or map every mathematical problem into a sequence of tasks, which is performed by computer, and towards the end, we get the desired result. These sequences of tasks, are what we call algorithms, consists of an exact sequence of simpler tasks that can be understood by computer. When this exact sequence is expressed in a way that computer understand, we call it a computer program. To understand, and organize well, the alorightms are often broken down to smallest possible building blocks. We  will discuss some of these building blocks now, and see how the role of bits comes into play.
-{: .text-justify}</p>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>In classical computing, which we usually call just computing, we transform or map every mathematical problem into a sequence of tasks, which is performed by computer, and towards the end, we get the desired result. These sequences of tasks, are what we call algorithms, consists of an exact sequence of simpler tasks that can be understood by computer. When this exact sequence is expressed in a way that computer understand, we call it a computer program. To understand, and organize well, the alorightms are often broken down to smallest possible building blocks. We  will discuss some of these building blocks now, and see how the role of bits comes into play.</p>
 </section>
 <section id="binary-data">
-<h1>Binary Data<a class="headerlink" href="#binary-data" title="Permalink to this heading">#</a></h1>
+<h2>Binary Data<a class="headerlink" href="#binary-data" title="Permalink to this heading">#</a></h2>
 <p>Most algorithms require an input in some form, which is required to feed into the algorithm, and we get result in the end. For example, <em>addition</em> is an algorithm, that requires input of two numbers, and gives the result, that is sum of two numbers.</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR;
+<div align="center" class="mermaid align-center">
+            graph LR;
 A(Input) --&gt; |Feed into| B{Algorithm} --&gt; |Computation finished| C(Result)
 
 a(12) &amp; b(15) --&gt; add{Addition} --&gt; sum(27)
-</pre></div>
-</div>
-<p>The input information, can in principle be anything, however over the decades we have learn to represent it in some standardised format which is easily understood by computers. For most applications, the input can be broken down to a list or collection of simpler object, and the simpler object are either a number, or a text. The numbers themselves can be integers, or real numbers. The text can be english, or any other language, and within each language, a text is an ordered sequence of characters of alphabets and symbols.
-{: .text-justify}</p>
+        </div>
+        <p>The input information, can in principle be anything, however over the decades we have learn to represent it in some standardised format which is easily understood by computers. For most applications, the input can be broken down to a list or collection of simpler object, and the simpler object are either a number, or a text. The numbers themselves can be integers, or real numbers. The text can be english, or any other language, and within each language, a text is an ordered sequence of characters of alphabets and symbols.</p>
 </section>
 <section id="bit">
-<h1>Bit<a class="headerlink" href="#bit" title="Permalink to this heading">#</a></h1>
-<p>The smallest unit of input, logically for us, and also for computer, is something called <strong>bit</strong> that is mapped to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. This minimalistic information exist as one of the two mutually exclusive possibility. Below are some more examples of such pair of possible ‘states’.
-{: .text-justify}</p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD;
+<h2>Bit<a class="headerlink" href="#bit" title="Permalink to this heading">#</a></h2>
+<p>The smallest unit of input, logically for us, and also for computer, is something called <strong>bit</strong> that is mapped to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. This minimalistic information exist as one of the two mutually exclusive possibility. Below are some more examples of such pair of possible ‘states’.</p>
+<div align="center" class="mermaid align-center">
+            graph TD;
 True &lt;---&gt; False;
 Head &lt;---&gt; Tail;
 Yes &lt;---&gt; No;
 Good &lt;---&gt; Bad;
 Like &lt;---&gt; Dislike;
 1 &lt;---&gt; 0;
-</pre></div>
-</div>
-</section>
+        </div>
+        </section>
 <section id="physical-representation-and-why-quantum">
-<h1>Physical Representation and why Quantum<a class="headerlink" href="#physical-representation-and-why-quantum" title="Permalink to this heading">#</a></h1>
-<p>The above are some of the daily life anologies of properties/informations that can be described by choosing one of the two possibilities. We say that such properties have 1 bit of information, and the two states are usually represented as 0 and 1. More and complex information can be represented by multitude of such bits, and is usually stored in computers, or other forms of modern storage using technologies which can (i) prepare an object in one of two clearly distinguishable physical states, and (ii) have tools available that can detect in which of the two states the object is in. Typical examples include -
-{: .text-justify}</p>
+<h2>Physical Representation and why Quantum<a class="headerlink" href="#physical-representation-and-why-quantum" title="Permalink to this heading">#</a></h2>
+<p>The above are some of the daily life anologies of properties/informations that can be described by choosing one of the two possibilities. We say that such properties have 1 bit of information, and the two states are usually represented as 0 and 1. More and complex information can be represented by multitude of such bits, and is usually stored in computers, or other forms of modern storage using technologies which can (i) prepare an object in one of two clearly distinguishable physical states, and (ii) have tools available that can detect in which of the two states the object is in. Typical examples include -</p>
 <ul class="simple">
 <li><p>Switches and wires use voltages to store bits where a High voltage corresponds to 1 and a low voltage corresponds to zero.</p></li>
 <li><p>CD’s consist of very large number of tiny pits that are either etched or not, and based on that, the pits are either reflective or not. We use this information to store and detect 0s and 1s.</p></li>
@@ -501,8 +453,7 @@ Like &lt;---&gt; Dislike;
 <iframe src="https://ourworldindata.org/grapher/transistors-per-microprocessor?time=earliest..2021" loading="lazy" style="width: 90%; height: 800px; border: 1px none;"></iframe>
 </center>
 <p>Now we know that smallest information is a <strong>bit</strong> (pun intended), and can be represented by either <strong>0</strong> or <strong>1</strong>. It is easy to see that using combinatorics, it’s possible to encode information of more complex system. For example, if we have two coins, they both can exist independently, upon flipping, in either of the Head or Tail state, or equivalently, in 1 or 0 state. The possible outcomes of the pair of coins are 4 possible states, namely 00, 01, 10, and 11. Thus, with 2 bits, we can distinguish among 4 possibilities, and any system that can exist in four possible distinct states, it’s state information can be encodes in 2 bits.
-Recall the lecture where we use the example of tossing coins as a means of conveying information, Bits or Binary data is a means of storing and transmitting inforamtion using 0’s and 1’s the more the bits we have the greater the amount of information we can convey.
-{: .text-justify}</p>
+Recall the lecture where we use the example of tossing coins as a means of conveying information, Bits or Binary data is a means of storing and transmitting inforamtion using 0’s and 1’s the more the bits we have the greater the amount of information we can convey.</p>
 <p>So to generalise, 3 bits can describe 8 possibilitis, and in general <span class="math notranslate nohighlight">\(n\)</span> bits can describe <span class="math notranslate nohighlight">\(2^n\)</span> possibilities. It’s easy to now see that adding 1 bit doubles the amount of information you can convey.</p>
 <p>Most common examples of such ‘binary encoding’ include the following -</p>
 <ul class="simple">
@@ -511,7 +462,7 @@ Recall the lecture where we use the example of tossing coins as a means of conve
 </ul>
 </section>
 <section id="conversion-from-decimal-to-binary">
-<h1>Conversion from Decimal to binary<a class="headerlink" href="#conversion-from-decimal-to-binary" title="Permalink to this heading">#</a></h1>
+<h2>Conversion from Decimal to binary<a class="headerlink" href="#conversion-from-decimal-to-binary" title="Permalink to this heading">#</a></h2>
 <p>Let us quickly recall how we represent numbers. What we usually refer to as decimal system, consists of using a unique sequence of digits for any number. For examples the number <strong>34593</strong>, <em>thirty four thousands five hundreds and ninety three</em>, is five digits. We have ten digits, namely 0, 1, 2, …8, 9 and every number is expressed as sum of one-digit multiple of tens, hundreds, thousands etc (which are powers of base 10). 34593 is essentially
 {: .text-justify}</p>
 <div class="math notranslate nohighlight">
@@ -522,10 +473,8 @@ Recall the lecture where we use the example of tossing coins as a means of conve
 &amp;= {\color{red}3}\times 10^4 + {\color{red}4}\times 10^3 + {\color{red}5}\times 10^2 + {\color{red}9}\times 10^1 + {\color{red}3}\times 10^0
 \end{align*}
 \end{split}\]</div>
-<p>Thus, 34593 is actually a decimal encoded representation of the number which by practice we identify as 34593. However, by choosing different base, we can represent the same number in different encoding. In computer science, for various purposes most commonly used encodings are Binary, Octal and Hexadecimal. In these representations, the numnber are expressed as sum of one-digit multiples of powers of the base, which is 8 for octal, 16 for hexadecimal, and 2 for binary.
-{: .text-justify}</p>
-<p>At hardware level everything is expressed in binary, so let’s see how binary encoding looks like. We can use a repeated division method to get the digits of a decimal number in a binary system, the example below shows how we can extract the binary representaion of the number 146 we get that the number <span class="math notranslate nohighlight">\({\color{red}146}\)</span> is representated by the no <span class="math notranslate nohighlight">\({\color{blue} 10010010}\)</span>. See the expansions below for decimal -
-{: .text-justify}</p>
+<p>Thus, 34593 is actually a decimal encoded representation of the number which by practice we identify as 34593. However, by choosing different base, we can represent the same number in different encoding. In computer science, for various purposes most commonly used encodings are Binary, Octal and Hexadecimal. In these representations, the numnber are expressed as sum of one-digit multiples of powers of the base, which is 8 for octal, 16 for hexadecimal, and 2 for binary.</p>
+<p>At hardware level everything is expressed in binary, so let’s see how binary encoding looks like. We can use a repeated division method to get the digits of a decimal number in a binary system, the example below shows how we can extract the binary representaion of the number 146 we get that the number <span class="math notranslate nohighlight">\({\color{red}146}\)</span> is representated by the no <span class="math notranslate nohighlight">\({\color{blue} 10010010}\)</span>. See the expansions below for decimal -</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -543,12 +492,10 @@ Recall the lecture where we use the example of tossing coins as a means of conve
 \end{aligned}
 \end{split}\]</div>
 <p>The figure below show Base 10 to base 2 conversion by repeated division of 2.</p>
-<p align="center">
-  <img width="720" " src="./images/binary.png">
-</p>
+<a class="reference internal image-reference" href="../../_images/binary3.png"><img alt="../../_images/binary3.png" class="align-center" src="../../_images/binary3.png" style="width: 720px;" /></a>
 </section>
 <section id="adding-in-binary">
-<h1>Adding in Binary<a class="headerlink" href="#adding-in-binary" title="Permalink to this heading">#</a></h1>
+<h2>Adding in Binary<a class="headerlink" href="#adding-in-binary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Addition follows the same rules in binary as they do in decimal however since there are only two digits we have a few changes we need to implement.</p></li>
 <li><p>The following rule table represents the addition in binary digits clearly.</p></li>
@@ -557,24 +504,23 @@ Recall the lecture where we use the example of tossing coins as a means of conve
 <li><p>1 + 0 = Sum : 1, Carry:0</p></li>
 <li><p>1+ 1 = Sum : 0, Carry:1</p></li>
 </ul>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR;
+<div align="center" class="mermaid align-center">
+            graph LR;
 a --&gt; s(sum = a or b);
 a --&gt; c(carry = a and b);
 b --&gt; s;
 b --&gt; c
-
-</pre></div>
-</div>
-</section>
+        </div>
+        </section>
 <section id="gates-and-operations-in-binary">
-<h1>Gates and Operations in Binary<a class="headerlink" href="#gates-and-operations-in-binary" title="Permalink to this heading">#</a></h1>
+<h2>Gates and Operations in Binary<a class="headerlink" href="#gates-and-operations-in-binary" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Now that we’ve understood what Bits are we need to understand how do we manipulate bits to perform and compute operations on this information which might be useful to us</p></li>
 <li><p>Gates represent the types of manipulation we can perform on Bits, Gates act on bit or a group of bits to provide a deterministic output.</p></li>
 <li><p>Let’s look at some of the basic gates in Classical Computing</p></li>
 </ul>
 <section id="not-gate">
-<h2>NOT gate<a class="headerlink" href="#not-gate" title="Permalink to this heading">#</a></h2>
+<h3>NOT gate<a class="headerlink" href="#not-gate" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The most simple gate we can perform on a Bit is the NOT gate, it simply flips a bit, taking it from 0 to 1 and from 1 to Zero.</p></li>
 </ul>
@@ -599,7 +545,7 @@ b --&gt; c
 </ul>
 </section>
 <section id="and-gate">
-<h2>AND gate<a class="headerlink" href="#and-gate" title="Permalink to this heading">#</a></h2>
+<h3>AND gate<a class="headerlink" href="#and-gate" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The second gate is a 2 bit gate called AND gate, it gives the output 1 when both the Inputs are 1 and it is 0 for all other cases.</p></li>
 </ul>
@@ -609,7 +555,7 @@ b --&gt; c
 </ul>
 </section>
 <section id="xor-gate">
-<h2>XOR gate<a class="headerlink" href="#xor-gate" title="Permalink to this heading">#</a></h2>
+<h3>XOR gate<a class="headerlink" href="#xor-gate" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The slightly more complicated 2-bit gate is the XOR gate, it’s truth table has been mentioned below</p></li>
 </ul>
@@ -646,7 +592,7 @@ b --&gt; c
 </ul>
 </section>
 <section id="classical-half-adder-using-gates">
-<h2>Classical Half-Adder using gates<a class="headerlink" href="#classical-half-adder-using-gates" title="Permalink to this heading">#</a></h2>
+<h3>Classical Half-Adder using gates<a class="headerlink" href="#classical-half-adder-using-gates" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>We can define a circuit that performs the additon operation we had defined previously using only the gates that we have introduced previously</p></li>
 </ul>
@@ -656,13 +602,12 @@ b --&gt; c
 </ul>
 <p><img alt="Truth Table half adder" src="../../_images/add_truth.png" /></p>
 <ul class="simple">
-<li><p>It is important to notice another key feture of the above circuit, we were <strong>able to copy the inputs</strong> A and B, i.e the single wire carrying the signal A could be split into two wires both carrying the same bit A, this feature will introduce us to an important difference between classical and quantum information later in the lecture.
-{: .text-justify}</p></li>
+<li><p>It is important to notice another key feture of the above circuit, we were <strong>able to copy the inputs</strong> A and B, i.e the single wire carrying the signal A could be split into two wires both carrying the same bit A, this feature will introduce us to an important difference between classical and quantum information later in the lecture.</p></li>
 </ul>
 </section>
 </section>
 <section id="features-of-classical-computing">
-<h1>Features of Classical computing<a class="headerlink" href="#features-of-classical-computing" title="Permalink to this heading">#</a></h1>
+<h2>Features of Classical computing<a class="headerlink" href="#features-of-classical-computing" title="Permalink to this heading">#</a></h2>
 <p>Before moving to Qubits and Quantum Computing, let’s list down all the important features of Classical Computing that we have encountered so far.</p>
 <ul class="simple">
 <li><p>We’ve seen that <strong>bits carry determistic pieces of information.</strong></p></li>
@@ -672,20 +617,16 @@ b --&gt; c
 <li><p>The AND, OR and NOT is one example of a universal gate set.</p></li>
 </ul>
 <section id="quantum-effects-and-quantum-computing">
-<h2>Quantum effects and Quantum computing<a class="headerlink" href="#quantum-effects-and-quantum-computing" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
+<h3>Quantum effects and Quantum computing<a class="headerlink" href="#quantum-effects-and-quantum-computing" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>And as the transistors get smaller and smaller, we start to run into some strange effects. So for instance, some of the bits that these transistors are encoding start flipping from their zeros state and to their one state, and sometimes when one bit is going through some process, it ends up affecting bits near it. And these are all these problems cause problems for classical computing.
-{: .text-justify}</p></li>
-<li><p>And this is due to the fact that we are entering the quantum realm. So at this really small scale of like energies and distance at we start running into quantum effects that aren’t really noticeable at a larger scale. And because these chips and transistors are getting smaller the Quantum effects within them become more apparent, these are known as miniaturization effects.
-{: .text-justify}</p></li>
+<li><p>And as the transistors get smaller and smaller, we start to run into some strange effects. So for instance, some of the bits that these transistors are encoding start flipping from their zeros state and to their one state, and sometimes when one bit is going through some process, it ends up affecting bits near it. And these are all these problems cause problems for classical computing.</p></li>
+<li><p>And this is due to the fact that we are entering the quantum realm. So at this really small scale of like energies and distance at we start running into quantum effects that aren’t really noticeable at a larger scale. And because these chips and transistors are getting smaller the Quantum effects within them become more apparent, these are known as miniaturization effects.</p></li>
 </ul>
 </section>
 </section>
 <section id="back-to-qubits">
-<h1>Back to Qubits<a class="headerlink" href="#back-to-qubits" title="Permalink to this heading">#</a></h1>
-<p>Now that we have completed a fundamental review of topics in Classical Computing, it is now a good time to revisit Quantum Comptuing through the lens of the knowledge we’ve acquired in this lecture so far.
-{: .text-justify}</p>
+<h2>Back to Qubits<a class="headerlink" href="#back-to-qubits" title="Permalink to this heading">#</a></h2>
+<p>Now that we have completed a fundamental review of topics in Classical Computing, it is now a good time to revisit Quantum Comptuing through the lens of the knowledge we’ve acquired in this lecture so far.</p>
 <ul class="simple">
 <li><p>Is it possible for us to leverage the effects that we were observing as the transistors started entering into the Quantum realm to our advantage</p></li>
 <li><p>It will first be useful to understand what is the equivalent of a Bit in the Quantum regime</p></li>
@@ -697,9 +638,8 @@ b --&gt; c
 </ul>
 </section>
 <section id="photons-as-qubits">
-<h1>Photons as qubits<a class="headerlink" href="#photons-as-qubits" title="Permalink to this heading">#</a></h1>
-<p>Let’s begin by understanding what exactly is a photon, A photon is a single particle of light and we know that light is an electromagnetic wave and just like every wave has a direction of oscillation a Photon has a direction of Oscillation called it’s Polarization.
-{: .text-justify}</p>
+<h2>Photons as qubits<a class="headerlink" href="#photons-as-qubits" title="Permalink to this heading">#</a></h2>
+<p>Let’s begin by understanding what exactly is a photon, A photon is a single particle of light and we know that light is an electromagnetic wave and just like every wave has a direction of oscillation a Photon has a direction of Oscillation called it’s Polarization.</p>
 <p><img alt="image tooltip here" src="../../_images/0_1_ket.png" /></p>
 <ul class="simple">
 <li><p>The above two polarization states, the Vertical and Horizontal polarization states are labelled 0 and 1 and behave as the 2 independent states within Quantum Computation.</p></li>
@@ -708,14 +648,14 @@ b --&gt; c
 <p>How do photons behave differently from classical information, showing behaviour of polarized photons in different basis gives a clear understanding about the need for a new model of understanding information</p>
 </section>
 <section id="quantum-superposition">
-<h1>Quantum Superposition<a class="headerlink" href="#quantum-superposition" title="Permalink to this heading">#</a></h1>
+<h2>Quantum Superposition<a class="headerlink" href="#quantum-superposition" title="Permalink to this heading">#</a></h2>
 <p>Although Quantum states can exist in the two directions (Vertical and horizontal as mentioned in the previous section) it can in general be any arbitrary direction as shown below two diagonal Quantum states which are rotated at a 45 degree angle</p>
 <p><img alt="Superposition in light" src="../../_images/+_-.png" /></p>
 <p>It can be shown however that these two states labelled <span class="math notranslate nohighlight">\(|+\rangle\)</span> and <span class="math notranslate nohighlight">\(|-\rangle\)</span> can be written as a combination of the states  <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> as introduced in the previous section. This combination of states to describe another new state is known as <strong>Quantum Superposition</strong></p>
 <p>To understand what this combination implied both intuitively and what the mathematical representation implies, it’s useful to first understand the nature of Quantum measurement and see how it is different from the general idea of measurement we are familiar with</p>
 </section>
 <section id="quantum-measurement">
-<h1>Quantum Measurement<a class="headerlink" href="#quantum-measurement" title="Permalink to this heading">#</a></h1>
+<h2>Quantum Measurement<a class="headerlink" href="#quantum-measurement" title="Permalink to this heading">#</a></h2>
 <p>We can only ever make a Quantum measurement device that asks if we are in one of the two independent states. Zero or one state, this is a key difference between the ideas of Quantum measurement in comparison to Classical measurement of mass or distance for example, in which we can genrally measure any of the many continuous values. Let’s say we have the zero state going into some measurement device. If that goes in, we will always measure zero and the zero state will come out.</p>
 <p>If we have a one state going into the measurement device and that goes in. It’ll come out of the one state and a one will be measured.
 However, with a plus state. If that is measured. Sometimes this happens. A zero is measured and the zero set comes out. And if we measure at another time, what might happen is we might measure a one and a one state will come out. This is described in the image below</p>
@@ -723,15 +663,15 @@ However, with a plus state. If that is measured. Sometimes this happens. A zero 
 <p>So this is a really important property of measurement. It collapses, superpositions. So we saw that the plus state is an equal superposition of zero and one, and this superposition is collapsed into one of the two <a class="reference external" href="http://states.So">states.So</a> measurement changes states and it changes into one of the two states that we are measuring for. Another point is we don’t get the same eight come every time and there is a probability associated each outcome</p>
 </section>
 <section id="quantum-gates-and-operations">
-<h1>Quantum Gates and Operations<a class="headerlink" href="#quantum-gates-and-operations" title="Permalink to this heading">#</a></h1>
+<h2>Quantum Gates and Operations<a class="headerlink" href="#quantum-gates-and-operations" title="Permalink to this heading">#</a></h2>
 <p>Now let as look at Quantum Gates, the equivalent of Classical gates in the Quantum regime, we’ll first start with a set of fundamental gates and then compare the features of Quantum Gates in comparison to Classical gates</p>
 <section id="x-gate">
-<h2>X gate<a class="headerlink" href="#x-gate" title="Permalink to this heading">#</a></h2>
+<h3>X gate<a class="headerlink" href="#x-gate" title="Permalink to this heading">#</a></h3>
 <p>This gate behaves similar to the NOT gate for the states <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>  causing the state to flip, the diagram below shows the action of the X gate on some Quantum states.</p>
 <p><img alt="X-Gate" src="../../_images/xgate.png" /></p>
 </section>
 <section id="hadamard-gate">
-<h2>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this heading">#</a></h2>
+<h3>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this heading">#</a></h3>
 <p>This gate takes the  <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>  states to the  <span class="math notranslate nohighlight">\(|+\rangle\)</span> and <span class="math notranslate nohighlight">\(|-\rangle\)</span>  states and vice-versa, Classically there is gate which acts as an analogue to such a gate</p>
 <ul class="simple">
 <li><p>No Classical Analogies to some gates</p></li>
@@ -742,7 +682,7 @@ However, with a plus state. If that is measured. Sometimes this happens. A zero 
 </section>
 </section>
 <section id="features-of-quantum-computers">
-<h1>Features of Quantum computers<a class="headerlink" href="#features-of-quantum-computers" title="Permalink to this heading">#</a></h1>
+<h2>Features of Quantum computers<a class="headerlink" href="#features-of-quantum-computers" title="Permalink to this heading">#</a></h2>
 <p>Compare and Contrast with Classical Features</p>
 <ul class="simple">
 <li><p>entanglement - 2 Qubits can be connexted in a way such that the description of one Qubit cannot be provided without the other qubit.</p></li>
@@ -754,26 +694,29 @@ However, with a plus state. If that is measured. Sometimes this happens. A zero 
 </ul>
 </section>
 <section id="appendix">
-<h1>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading">#</a></h1>
-<blockquote>
-<div><p>## Future updates and Scratchpad
-{: .block-tip}</p>
-</div></blockquote>
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading">#</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Future updates and Scratchpad</p>
+</div>
 <ul class="simple">
 <li><p>Introduction as an abstract concept without mathematics (perhaps circles), maybe with an experiment like Mach-Zender/Stern Gerlach.</p></li>
 <li><p>A discussion on measurement and what is different.</p></li>
 <li><p>Can even discuss some gate actions (Paulis and Hadamard) on qubits.</p></li>
 <li><p>Discussion about what quantum properties such as coherence can add to computing (a thought experiment demonstrating Bell’s inequalities without mentioning them can be discussed here). Maybe the way to go is a light discussion like in <a class="reference external" href="https://www.youtube.com/watch?v=zcqZHYo7ONs.">this video</a>.</p></li>
 </ul>
-<p>{% include youtube.html id=”zcqZHYo7ONs” %}</p>
+<center>
+<iframe width="720" height="405" src="https://www.youtube.com/embed/zcqZHYo7ONs?si=TdULdSXysY4W7eQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</center>
 </section>
 <section id="references">
-<h1><span class="xref myst">References</span><a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<h2><span class="xref myst">References</span><a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <p>The following references are optional reading material:</p>
 <ol class="arabic simple">
 <li><p>The following chapters of the textbook Introduction to Classical and Quantum Computing(<a class="reference external" href="https://www.thomaswong.net/introduction-to-classical-and-quantum-computing-1e3p.pdf">pdf</a>) : 1.1, 1.2, 1.3, 2.2, 2.3, 2.6, 4.4</p></li>
 <li><p><a class="reference external" href="https://qiskit.org/textbook/ch-states/single-qubit-gates.html#6.-The-I,-S-and-T-gates--">Qiskit Textbook for S gate and T gate</a></p></li>
 </ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -812,7 +755,7 @@ However, with a plus state. If that is measured. Sometimes this happens. A zero 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Learning outcomes</p>
+        <p class="prev-next-title">Lecture 2: Integrating Classical and Quantum Computing</p>
       </div>
     </a>
     <a class="right-next"
@@ -839,38 +782,36 @@ However, with a plus state. If that is measured. Sometimes this happens. A zero 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Learning outcomes</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-data">Binary Data</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bit">Bit</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-representation-and-why-quantum">Physical Representation and why Quantum</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-from-decimal-to-binary">Conversion from Decimal to binary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-in-binary">Adding in Binary</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-and-operations-in-binary">Gates and Operations in Binary</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#not-gate">NOT gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xor-gate">XOR gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-half-adder-using-gates">Classical Half-Adder using gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binary-data">Binary Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bit">Bit</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-representation-and-why-quantum">Physical Representation and why Quantum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-from-decimal-to-binary">Conversion from Decimal to binary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-in-binary">Adding in Binary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gates-and-operations-in-binary">Gates and Operations in Binary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-gate">NOT gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#and-gate">AND gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xor-gate">XOR gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-half-adder-using-gates">Classical Half-Adder using gates</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-classical-computing">Features of Classical computing</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-effects-and-quantum-computing">Quantum effects and Quantum computing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-classical-computing">Features of Classical computing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-effects-and-quantum-computing">Quantum effects and Quantum computing</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-qubits">Back to Qubits</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#photons-as-qubits">Photons as qubits</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-superposition">Quantum Superposition</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-measurement">Quantum Measurement</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-gates-and-operations">Quantum Gates and Operations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x-gate">X gate</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-to-qubits">Back to Qubits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photons-as-qubits">Photons as qubits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-superposition">Quantum Superposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-measurement">Quantum Measurement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-gates-and-operations">Quantum Gates and Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-gate">X gate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hadamard-gate">Hadamard Gate</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-quantum-computers">Features of Quantum computers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><span class="xref myst">References</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features-of-quantum-computers">Features of Quantum computers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references"><span class="xref myst">References</span></a></li>
 </ul>
-
   </nav></div>
 
 </div></div>

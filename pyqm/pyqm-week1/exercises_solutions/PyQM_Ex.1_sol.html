@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -164,43 +165,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../index.html">
-                    QPCC
+                    ICHEC lectures
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QPCC course</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">Lectures</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Learning outcomes</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">QPCC Lectures Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Lacture 1: Demystifying Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Lecture 2: Integrating Classical and Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Lecture 3: From Bits to Qubits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-4/realizing-quantum-computing-systems.html">Learning Outcomes</a></li>
 
 
@@ -214,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-5/accessing-quantum-computing-systems.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-6/landscape-of-sdks-tools.html">Learning Outcome</a></li>
+
+
+
+
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-7/landscape-of-quantum-algorithms.html">Landscape of quantum algorithms</a></li>
@@ -441,7 +420,7 @@ $<span class="math notranslate nohighlight">\(a_0 = \frac{\hbar}{m_e c \alpha} \
 <p>The energy of the <span class="math notranslate nohighlight">\(n\)</span>-th is given by
 $<span class="math notranslate nohighlight">\( E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} = \frac{E_1}{n^2} \)</span><span class="math notranslate nohighlight">\(
 Make a variable for the \)</span>n=1$ energy level.
-<img src="images/Energy_Levels.png" alt="two dice" width="500"/></p>
+<a class="reference internal" href="../../../_images/Energy_Levels1.png"><img alt="two dice" src="../../../_images/Energy_Levels1.png" style="width: 500px;" /></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E1</span> <span class="o">=</span> <span class="o">-</span> <span class="n">e</span> <span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">ep0</span><span class="o">*</span><span class="n">a0</span><span class="p">)</span>
@@ -598,7 +577,7 @@ Make a variable for the \)</span>n=1$ energy level.
 <div class="math notranslate nohighlight">
 \[E_\gamma = E_i - E_f \]</div>
 <p>the final energy state for the Balmer series is $<span class="math notranslate nohighlight">\( f=2 \)</span>$
-<img src="images/Energy_Levels_Transitions.png" alt="two dice" width="500"/></p>
+<a class="reference internal" href="../../../_images/Energy_Levels_Transitions1.png"><img alt="two dice" src="../../../_images/Energy_Levels_Transitions1.png" style="width: 500px;" /></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">E_levels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">E_levels</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>

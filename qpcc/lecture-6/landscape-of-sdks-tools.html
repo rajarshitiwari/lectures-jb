@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -164,43 +165,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    QPCC
+                    ICHEC lectures
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QPCC course</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../README.html">Lectures</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../lecture-1/demystifying-quantum-computing.html">Learning outcomes</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../lecture-2/integrating-classical-and-quantum-computing.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../lecture-3/from-bits-to-qubits.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../README.html">QPCC Lectures Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture-1/demystifying-quantum-computing.html">Lacture 1: Demystifying Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture-2/integrating-classical-and-quantum-computing.html">Lecture 2: Integrating Classical and Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture-3/from-bits-to-qubits.html">Lecture 3: From Bits to Qubits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture-4/realizing-quantum-computing-systems.html">Learning Outcomes</a></li>
 
 
@@ -214,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../lecture-5/accessing-quantum-computing-systems.html">Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Learning Outcome</a></li>
+
+
+
+
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="../lecture-7/landscape-of-quantum-algorithms.html">Landscape of quantum algorithms</a></li>
@@ -381,6 +360,15 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Learning Outcome</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#softwares-and-tools-for-quantum-programming">Softwares and Tools for Quantum Programming</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-quantum-software">High-Level Quantum Software</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-quantum-languages-libraries">Generic quantum languages &amp; libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialised-quantum-languages-libraries">Specialised quantum languages &amp; libraries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#low-level-quantum-software">Low-Level Quantum Software</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-programming-stacks-as-a-service">Quantum Programming Stacks as a Service</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-workflows-orchestrators">Quantum Workflows &amp; Orchestrators</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-quantum-software-stacks">Custom Quantum Software Stacks</a></li>
 </ul>
 
             </nav>
@@ -408,7 +396,19 @@ In this lecture, we discuss the Software and Tools for Quantum Programming. We w
 </tr>
 </table>
 <ul class="simple">
-<li><p>Introduction
+<li><p>Introduction</p></li>
+<li><p>Softwares and Tools for Quantum Programming</p></li>
+<li><p>High-Level Quantum Software
+- Quantum programming languages</p>
+<ul>
+<li><p>Generic quantum languages &amp; libraries</p></li>
+<li><p>Specialised quantum languages &amp; libraries</p></li>
+</ul>
+</li>
+<li><p>Low-Level Quantum Software</p></li>
+<li><p>Quantum Programming Stacks as a Service</p></li>
+<li><p>Quantum Workflows &amp; Orchestrators</p></li>
+<li><p>Custom Quantum Software Stacks
 {:toc}</p></li>
 </ul>
 </section>
@@ -443,6 +443,51 @@ Some of the most common terms in softwares and programming in general are the fo
 end
 </pre></div>
 </div>
+</section>
+<section id="high-level-quantum-software">
+<h1>High-Level Quantum Software<a class="headerlink" href="#high-level-quantum-software" title="Permalink to this heading">#</a></h1>
+<p>#### Quantum programming languages</p>
+<section id="generic-quantum-languages-libraries">
+<h2>Generic quantum languages &amp; libraries<a class="headerlink" href="#generic-quantum-languages-libraries" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qiskit</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># this constructs a quantum circuit object named qc.</span>
+<span class="c1"># quantum circuit object has methods, that can add different gates to the circuit.</span>
+
+<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Applies the Hadamard gate to the first qubit.</span>
+
+<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Applies the CNOT gate between the first two qubits.</span>
+
+<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Print the drawing of the circuit.</span>
+</pre></div>
+</div>
+</section>
+<section id="specialised-quantum-languages-libraries">
+<h2>Specialised quantum languages &amp; libraries<a class="headerlink" href="#specialised-quantum-languages-libraries" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section id="low-level-quantum-software">
+<h1>Low-Level Quantum Software<a class="headerlink" href="#low-level-quantum-software" title="Permalink to this heading">#</a></h1>
+<div class="highlight-openqasm notranslate"><div class="highlight"><pre><span></span>OPENQASM 2.0;
+include &quot;qelib1.inc&quot;;
+
+qreg q[2];
+creg c[2];
+
+h q[0];
+cx [0], q[1];
+measure q[0] -&gt; c[0];
+measure q[1] -&gt; c[1];
+</pre></div>
+</div>
+</section>
+<section id="quantum-programming-stacks-as-a-service">
+<h1>Quantum Programming Stacks as a Service<a class="headerlink" href="#quantum-programming-stacks-as-a-service" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="quantum-workflows-orchestrators">
+<h1>Quantum Workflows &amp; Orchestrators<a class="headerlink" href="#quantum-workflows-orchestrators" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="custom-quantum-software-stacks">
+<h1>Custom Quantum Software Stacks<a class="headerlink" href="#custom-quantum-software-stacks" title="Permalink to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -511,6 +556,15 @@ end
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Learning Outcome</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#softwares-and-tools-for-quantum-programming">Softwares and Tools for Quantum Programming</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-quantum-software">High-Level Quantum Software</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generic-quantum-languages-libraries">Generic quantum languages &amp; libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specialised-quantum-languages-libraries">Specialised quantum languages &amp; libraries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#low-level-quantum-software">Low-Level Quantum Software</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-programming-stacks-as-a-service">Quantum Programming Stacks as a Service</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-workflows-orchestrators">Quantum Workflows &amp; Orchestrators</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-quantum-software-stacks">Custom Quantum Software Stacks</a></li>
 </ul>
 
   </nav></div>
