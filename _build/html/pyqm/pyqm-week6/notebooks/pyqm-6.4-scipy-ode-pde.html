@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -164,43 +165,16 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../../index.html">
-                    QPCC
+                    ICHEC lectures
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QPCC course</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">Lectures</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Learning outcomes</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Learning outcomes</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/README.html">QPCC Lectures Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-1/demystifying-quantum-computing.html">Lacture 1: Demystifying Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-2/integrating-classical-and-quantum-computing.html">Lecture 2: Integrating Classical and Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-3/from-bits-to-qubits.html">Lecture 3: From Bits to Qubits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-4/realizing-quantum-computing-systems.html">Learning Outcomes</a></li>
 
 
@@ -214,6 +188,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-5/accessing-quantum-computing-systems.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-6/landscape-of-sdks-tools.html">Learning Outcome</a></li>
+
+
+
+
+
 
 
 <li class="toctree-l1"><a class="reference internal" href="../../../qpcc/lecture-7/landscape-of-quantum-algorithms.html">Landscape of quantum algorithms</a></li>
@@ -383,7 +362,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration">Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-differential-equations-odes">Ordinary Differential Equations (ODEs)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-method">Finite-Difference Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-s-theorem">Taylor’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylors-theorem">Taylor’s Theorem</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-operator">The Laplace Operator</a></li>
 </ul>
 </li>
@@ -662,8 +641,8 @@ Lets solve this, for an initial \)</span>100<span class="math notranslate nohigh
 </section>
 <section id="finite-difference-method">
 <h2>Finite-Difference Method<a class="headerlink" href="#finite-difference-method" title="Permalink to this heading">#</a></h2>
-<section id="taylor-s-theorem">
-<h3>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this heading">#</a></h3>
+<section id="taylors-theorem">
+<h3>Taylor’s Theorem<a class="headerlink" href="#taylors-theorem" title="Permalink to this heading">#</a></h3>
 <p>The taylor series allows us to approximate derivatives, particularly in a discrete step-wise manner. We will leverage this to our advantage, greatly simplifying integral and derivative problems.</p>
 <div class="math notranslate nohighlight">
 \[f(x_0 + h) = f(x_0) + \frac{f'(x_0)}{1!}h + \frac{f''(x_0)}{2!}h^2  + ... + \frac{f^{(n)}(x_0)}{n!}h^n + R_n(x) \]</div>
@@ -6847,7 +6826,7 @@ if (IPython.notebook.kernel !== null) {
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration">Integration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-differential-equations-odes">Ordinary Differential Equations (ODEs)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-difference-method">Finite-Difference Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylor-s-theorem">Taylor’s Theorem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taylors-theorem">Taylor’s Theorem</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-operator">The Laplace Operator</a></li>
 </ul>
 </li>

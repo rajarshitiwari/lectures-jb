@@ -23,6 +23,15 @@ In this lecture, we discuss the Software and Tools for Quantum Programming. We w
 
 
 - Introduction
+- Softwares and Tools for Quantum Programming
+- High-Level Quantum Software
+  - Quantum programming languages
+  - Generic quantum languages & libraries
+  - Specialised quantum languages & libraries
+- Low-Level Quantum Software
+- Quantum Programming Stacks as a Service
+- Quantum Workflows & Orchestrators
+- Custom Quantum Software Stacks
 {:toc}
 
 
@@ -43,8 +52,7 @@ Just like the SDKs (which you know now :-D) we will run through some of the *sof
 > - [Software layer](https://en.wikipedia.org/wiki/Abstraction_layer) is a terms that originates from different layer of abstraction in writing a program that does a particular task for me.
 > - [Software Stack](https://en.wikipedia.org/wiki/Solution_stack) is basically a set of software subsystems or components needed to create a complete platform to build and run a certain type of program. For example, to write a simple python code and execute it, you need (i) a python interpreter, (ii) a convenient text editor to write python code, (iii) a file manager to save and organize file, and (iv) a terminal to sometime configure, install or manage python interpreter. So the collection of these four will be required to develop python software. Such collection is often referred to as **full-stack**.
 
-
- Then we'll introduce the notion of the quantum programming stack, which overlaps the lower two layers of the Quantum Stack. This encapsulates the idea that these two layers are tightly connected and in order to build a functioning quantum programming stack, one must carefully select the compatible components from the two constituting layers. Alternatively a number of big vendors provide pre-integrated quantum programming stacks as a service, deployed in a cloud environment, some components of which could also be used locally. Another approach are the so called Quantum Orchestrators which are very similar to the QPSaaS, but they are generally provided by smaller, independent quantum software companies. The Quantum Orchestrators are generally bespoke and more flexible and could be deployed either on-prem or in the cloud. ​
+Then we'll introduce the notion of the quantum programming stack, which overlaps the lower two layers of the Quantum Stack. This encapsulates the idea that these two layers are tightly connected and in order to build a functioning quantum programming stack, one must carefully select the compatible components from the two constituting layers. Alternatively a number of big vendors provide pre-integrated quantum programming stacks as a service, deployed in a cloud environment, some components of which could also be used locally. Another approach are the so called Quantum Orchestrators which are very similar to the QPSaaS, but they are generally provided by smaller, independent quantum software companies. The Quantum Orchestrators are generally bespoke and more flexible and could be deployed either on-prem or in the cloud. ​
 
 ```mermaid
  graph LR;
@@ -58,4 +66,46 @@ Just like the SDKs (which you know now :-D) we will run through some of the *sof
     end
 end
 ```
+
+### High-Level Quantum Software
+
+#### Quantum programming languages
+
+#### Generic quantum languages & libraries
+
+```python
+# Qiskit
+qc = QuantumCircuit(2) # this constructs a quantum circuit object named qc.
+# quantum circuit object has methods, that can add different gates to the circuit.
+
+qc.h(0) # Applies the Hadamard gate to the first qubit.
+
+qc.cx(0, 1) # Applies the CNOT gate between the first two qubits.
+
+qc.draw() # Print the drawing of the circuit.
+```
+
+
+#### Specialised quantum languages & libraries
+
+### Low-Level Quantum Software
+
+```openqasm
+OPENQASM 2.0;
+include "qelib1.inc";
+
+qreg q[2];
+creg c[2];
+
+h q[0];
+cx [0], q[1];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+```
+
+### Quantum Programming Stacks as a Service
+
+### Quantum Workflows & Orchestrators
+
+### Custom Quantum Software Stacks
 
